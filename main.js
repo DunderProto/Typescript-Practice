@@ -30,3 +30,23 @@ console.log(c);
 var randomValue = 10;
 randomValue = true;
 randomValue = 'Isaac';
+var myVariable = 10;
+function hasName(obj) {
+    return !!obj &&
+        typeof obj === "object" &&
+        "name" in obj;
+}
+if (hasName(myVariable)) {
+    console.log(myVariable.name);
+}
+// console.log(myVariable.name);
+// myVariable();
+myVariable.toUpperCase();
+var a;
+a = 10;
+a = true;
+var b = 20;
+// b = false --> error (type inference)
+var multiType;
+multiType = 20;
+multiType = true;

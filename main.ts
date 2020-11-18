@@ -36,3 +36,31 @@ console.log(c);
 let randomValue: any = 10;
 randomValue = true;
 randomValue = 'Isaac';
+
+let myVariable: unknown = 10;
+
+function hasName(obj: any): obj is {name: string} {
+    return !!obj &&
+        typeof obj === "object" &&
+        "name" in obj
+}
+
+if (hasName(myVariable)) {
+    console.log(myVariable.name);
+}
+
+// console.log(myVariable.name);
+// myVariable();
+
+(myVariable as string).toUpperCase();
+
+let a;
+a = 10;
+a = true;
+
+let b = 20;
+// b = false --> error (type inference)
+
+let multiType: number | boolean;
+multiType = 20;
+multiType = true;
