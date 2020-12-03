@@ -92,7 +92,7 @@ let p = {
 fullName(p);
 
 class Employee {
-    employeeName: string;
+    public employeeName: string;
 
     constructor(name: string) {
         this.employeeName = name;
@@ -120,4 +120,4 @@ class Manager extends Employee {
 let m1 = new Manager('Bruce');
 m1.delegateWork();
 m1.greet();
-console.log(m1.employeeName);
+// console.log(m1.employeeName);
